@@ -44,3 +44,25 @@ let returnObj = (x, y) => {
 let obj = returnObj(3, 4);
 console.log(`exponent of (3, 4): ${obj.exp}
 product of (3, 4): ${obj.prod}`);
+
+// spread syntax.
+// 1. write function that takes 3 parameters, name, location, favFood, and logs them to console.
+let logNLF = (name, location, favFood) => console.log(`name: ${name}
+location: ${location}
+favorite food: ${favFood}`);
+// logNLF('Nick', 'Avondale', 'bacon');
+// 2. create array with 3 values that match function order.
+let testArray = ['Paul', 'Birmingham', 'Kimchi'];
+// 3. use spread operator to insert array into function.
+logNLF(...testArray);
+// 4. create variable set to your name.
+let name = 'Nick';
+// 5. write function that takes your name.
+// 6. using spread syntax, create variable in function that spreads into array.
+let takeName = name => [...name];
+// console.log(takeName('Nick'));
+// 7. using for loop, loop through spread string and console log each value.
+let nameArray = takeName('Nick');
+for (i = 0; i < nameArray.length; i++) {
+    console.log(nameArray[i]);
+}
